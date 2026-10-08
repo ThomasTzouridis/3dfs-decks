@@ -1,0 +1,35 @@
+{
+ "imgs": [
+  {
+   "src": "https://www.biogene.com/assets/img/biogene-logo-solo-white-with-tagline.svg?h=719a6c2ef52c9b28473db799f3155145",
+   "w": 357,
+   "h": 111,
+   "alt": "Logo"
+  },
+  {
+   "src": "https://www.biogene.com/assets/img/biogene-logo-solo-bio-white-no-tagline.png?h=c4d4cdc3f1cc03776589eaaa3440a7a6",
+   "w": 351,
+   "h": 74,
+   "alt": "BioGene logo"
+  }
+ ],
+ "svgs": [],
+ "h1": "WE DETECT BIOTHREATS OF HIGH CONSEQUENCE AT THE POINT-OF-DECISION ",
+ "title": "BioGene | Real-Time PCR Detection of HCID Biothreats",
+ "logo_files": [
+  {
+   "src": "https://www.biogene.com/assets/img/biogene-logo-solo-white-with-tagline.svg?h=719a6c2ef52c9b28473db799f3155145",
+   "file": "biogene-pitch_logo1.svg",
+   "alt": "Logo",
+   "w": 357,
+   "h": 111
+  },
+  {
+   "src": "https://www.biogene.com/assets/img/biogene-logo-solo-bio-white-no-tagline.png?h=c4d4cdc3f1cc03776589eaaa3440a7a6",
+   "file": "biogene-pitch_logo2.img",
+   "alt": "BioGene logo",
+   "w": 351,
+   "h": 74
+  }
+ ]
+}
