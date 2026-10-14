@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delivery Plan | 3D For Science x ActiScale</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+<style>
+:root{--navy:#0b1a2e;--deep:#000814;--pink:#ec008c;--ink:#f3f5f8;--soft:#aab6c8;--line:rgba(255,255,255,.12);--card:rgba(255,255,255,.04)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--deep);color:var(--ink);font-family:Montserrat,sans-serif;overflow:hidden}
+#viewport{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+#stage{width:1280px;height:720px;position:relative;transform-origin:center center;flex:none}
+.slide{position:absolute;inset:0;padding:72px 88px 96px;background:radial-gradient(ellipse at 85% 0%,#14304f 0%,var(--navy) 55%,var(--deep) 100%);opacity:0;visibility:hidden;transition:opacity .45s ease;display:flex;flex-direction:column;overflow:hidden}
+.slide.on{opacity:1;visibility:visible}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);margin-bottom:18px}
+h1{font-size:64px;font-weight:700;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:42px;font-weight:700;line-height:1.12;margin-bottom:40px}
+p.lead{font-size:20px;line-height:1.55;color:var(--soft);max-width:760px}
+.pink{color:var(--pink)}
+.foot{position:absolute;left:88px;right:200px;bottom:36px;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#6f7f96}
+.foot img{height:22px;opacity:.85}
+/* cover */
+.cover{justify-content:center}
+.cover .rule{width:72px;height:4px;background:var(--pink);margin:34px 0}
+.cover .logos{position:absolute;top:64px;left:88px;display:flex;align-items:center;gap:22px;font-size:15px;font-weight:700;letter-spacing:.18em}
+.cover .logos img{height:46px}
+.cover .logos span{color:#6f7f96;font-weight:400}
+.cover .dates{display:flex;gap:14px;margin-top:8px}
+.pill{font-size:14px;font-weight:700;letter-spacing:.08em;padding:9px 16px;border:1px solid var(--line);border-radius:999px;color:var(--ink);background:var(--card)}
+/* timeline */
+.tl{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;min-height:330px;position:relative}
+.day{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 28px;display:flex;flex-direction:column;gap:18px;position:relative}
+.day.hl{border-color:rgba(236,0,140,.55);background:linear-gradient(180deg,rgba(236,0,140,.12),rgba(236,0,140,.02))}
+.day .d{font-size:48px;font-weight:700;line-height:1}
+.day .wd{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-top:-8px}
+.day .tag{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--pink)}
+.day ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+.day li{font-size:17px;line-height:1.45;padding-left:22px;position:relative}
+.day li:before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--pink)}
+/* tracker */
+.trk{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.metric{border-top:3px solid var(--pink);padding-top:22px}
+.metric .n{font-size:13px;font-weight:700;letter-spacing:.2em;color:var(--pink);margin-bottom:12px}
+.metric h3{font-size:24px;font-weight:700;margin-bottom:10px}
+.metric p{font-size:16px;line-height:1.55;color:var(--soft)}
+.note{margin-top:auto;font-size:16px;line-height:1.55;color:var(--soft);border-left:3px solid var(--line);padding-left:18px;max-width:900px}
+/* campaigns */
+.camps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;min-height:300px}
+.camp{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 28px;display:flex;flex-direction:column;gap:14px}
+.camp .num{font-size:56px;font-weight:700;line-height:1;color:var(--pink)}
+.camp h3{font-size:24px;font-weight:700;line-height:1.25}
+.camp .who{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--soft)}
+.camp p{font-size:16px;line-height:1.55;color:var(--soft)}
+/* accounts */
+.acc{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.acc div{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:20px 18px;display:flex;flex-direction:column;gap:8px;min-height:92px;justify-content:space-between}
+.acc b{font-size:18px;font-weight:700}
+.acc i{font-style:normal;font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--pink)}
+.acc .med{border-style:dashed}
+.legend{margin-top:22px;font-size:14px;color:var(--soft)}
+/* close */
+.close{justify-content:center}
+.close h1{font-size:72px}
+/* nav */
+#nav{position:fixed;bottom:18px;right:22px;display:flex;align-items:center;gap:10px;z-index:9;font-size:13px;color:#8796ad;letter-spacing:.1em}
+#nav button{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--ink);font-size:17px;cursor:pointer;font-family:inherit}
+#nav button:hover{border-color:var(--pink)}
+#bar{position:fixed;left:0;top:0;height:3px;background:var(--pink);transition:width .35s ease;z-index:9}
+/* phones: one slide per screen, natural flow */
+@media (max-width:760px){
+  html,body{overflow:auto;height:auto}
+  #viewport{position:static;display:block}
+  #stage{width:auto;height:auto;transform:none!important}
+  .slide{position:relative;inset:auto;opacity:1;visibility:visible;min-height:100svh;padding:56px 20px 80px;justify-content:flex-start!important}
+  .slide+.slide{border-top:1px solid var(--line)}
+  h1,.close h1{font-size:38px}
+  h2{font-size:28px;margin-bottom:24px}
+  .tl,.trk,.camps{grid-template-columns:1fr;gap:14px}
+  .acc{grid-template-columns:repeat(2,1fr);gap:10px}
+  .cover .logos{position:static;margin-bottom:40px}
+  .cover .logos img{height:34px}
+  .cover{justify-content:center!important}
+  .foot{left:20px;right:20px;bottom:24px}
+  .note{margin-top:28px}
+  #nav,#bar{display:none}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div id="viewport"><div id="stage">
+
+<section class="slide cover on">
+  <div class="logos"><img src="../assets/10197801_3Dfs_logo_white.png" alt="3D For Science"><span>X</span>ACTISCALE</div>
+  <div class="eyebrow">Delivery plan</div>
+  <h1>New campaigns,<br><span class="pink">live on 16 October.</span></h1>
+  <div class="rule"></div>
+  <p class="lead">What we deliver for 3D For Science this week, day by day, and the three campaigns that go out with the new leads.</p>
+  <div class="dates" style="margin-top:34px"><span class="pill">14.10</span><span class="pill">15.10</span><span class="pill">16.10</span></div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">The week</div>
+  <h2>Three days to launch</h2>
+  <div class="tl">
+    <div class="day">
+      <div class="d">14.10</div><div class="wd">Wednesday</div>
+      <div class="tag">Setup</div>
+      <ul><li>Two new LinkedIn accounts added for 3D For Science</li><li>All leads scraped for the new campaigns</li></ul>
+    </div>
+    <div class="day">
+      <div class="d">15.10</div><div class="wd">Thursday</div>
+      <div class="tag">Build</div>
+      <ul><li>Presentations finished</li><li>New tracker finished: which lead viewed which page, for how long, and how often they clicked the booking link</li></ul>
+    </div>
+    <div class="day hl">
+      <div class="d">16.10</div><div class="wd">Friday</div>
+      <div class="tag">Launch</div>
+      <ul><li>All new campaigns go live with the new leads</li></ul>
+    </div>
+  </div>
+  <div class="foot"><span>3D For Science x ActiScale</span><span>02</span></div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">New tracker, ready 15.10</div>
+  <h2>We see what each lead does<br>with their presentation</h2>
+  <div class="trk">
+    <div class="metric"><div class="n">01</div><h3>Which page</h3><p>Every slide a lead opens, per lead.</p></div>
+    <div class="metric"><div class="n">02</div><h3>How long</h3><p>Time spent on each page, so we know what holds their attention.</p></div>
+    <div class="metric"><div class="n">03</div><h3>Booking clicks</h3><p>How many times a lead clicked the booking link.</p></div>
+  </div>
+  <p class="note">This tells us who is warm before they reply, so follow ups go to the right people first.</p>
+  <div class="foot"><span>3D For Science x ActiScale</span><span>03</span></div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">Launching 16.10</div>
+  <h2>Three campaigns</h2>
+  <div class="camps">
+    <div class="camp"><div class="num">1</div><div class="who">Biotech</div><h3>CEOs, Owners and Founders</h3><p>Biotech decision makers at the top of the company.</p></div>
+    <div class="camp"><div class="num">2</div><div class="who">Biotech</div><h3>Other titles</h3><p>The wider biotech team beyond the founders.</p></div>
+    <div class="camp"><div class="num">3</div><div class="who">Pharma</div><h3>Existing customers</h3><p>New contacts inside companies 3D For Science already works with.</p></div>
+  </div>
+  <div class="foot"><span>3D For Science x ActiScale</span><span>04</span></div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">Campaign 3</div>
+  <h2>13 existing customer accounts</h2>
+  <div class="acc">
+    <div><i>01</i><b>AbbVie</b></div>
+    <div><i>02</i><b>Bayer</b></div>
+    <div><i>03</i><b>AstraZeneca</b></div>
+    <div><i>04</i><b>Biogen</b></div>
+    <div><i>05</i><b>Chiesi</b></div>
+    <div><i>06</i><b>LEO Pharma</b></div>
+    <div><i>07</i><b>Alexion</b></div>
+    <div><i>08</i><b>SOBI</b></div>
+    <div><i>09</i><b>Grünenthal</b></div>
+    <div><i>10</i><b>GE Healthcare</b></div>
+    <div><i>11</i><b>Menarini</b></div>
+    <div><i>12</i><b>MSD</b></div>
+    <div><i>13</i><b>Medtronic</b></div>
+  </div>
+  <p class="legend">Each account gets its own campaign, built around the work 3D For Science has already done there.</p>
+  <div class="foot"><span>3D For Science x ActiScale</span><span>05</span></div>
+</section>
+
+<section class="slide close">
+  <div class="eyebrow">16 October</div>
+  <h1>All campaigns live,<br><span class="pink">every lead tracked.</span></h1>
+  <p class="lead" style="margin-top:30px">Two new LinkedIn accounts, fresh leads, finished presentations and a tracker that shows who is ready to talk.</p>
+  <div class="foot"><span>3D For Science x ActiScale</span><img src="../assets/10197801_3Dfs_logo_white.png" alt="3D For Science"></div>
+</section>
+
+</div></div>
+<div id="nav"><button id="prev" aria-label="Previous">&#8249;</button><span id="count">1 / 6</span><button id="next" aria-label="Next">&#8250;</button></div>
+<script>
+(function(){
+  var s=[].slice.call(document.querySelectorAll('.slide')),i=0,st=document.getElementById('stage');
+  function fit(){var k=Math.min(innerWidth/1280,innerHeight/720);st.style.transform='scale('+k+')'}
+  function go(n){i=Math.max(0,Math.min(s.length-1,n));s.forEach(function(e,j){e.classList.toggle('on',j===i)});
+    document.getElementById('count').textContent=(i+1)+' / '+s.length;document.getElementById('bar').style.width=((i+1)/s.length*100)+'%';
+    try{history.replaceState(null,'','#'+(i+1))}catch(e){}}
+  addEventListener('resize',fit);fit();
+  addEventListener('keydown',function(e){if(['ArrowRight','PageDown',' '].indexOf(e.key)>-1){go(i+1);e.preventDefault()}if(['ArrowLeft','PageUp'].indexOf(e.key)>-1){go(i-1);e.preventDefault()}});
+  document.getElementById('next').onclick=function(){go(i+1)};document.getElementById('prev').onclick=function(){go(i-1)};
+  var x0=null;addEventListener('touchstart',function(e){x0=e.touches[0].clientX});addEventListener('touchend',function(e){if(x0===null)return;var d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>50)go(i+(d<0?1:-1));x0=null});
+  go((parseInt(location.hash.slice(1))||1)-1);
+})();
+</script>
+</body>
+</html>
