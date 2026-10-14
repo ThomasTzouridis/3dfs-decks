@@ -36,17 +36,6 @@
 html, body { background:#111; }
 .reveal .sl-block[data-block-type=html]{position:absolute}
 .reveal .sl-block[data-block-type=html] .sl-block-content{width:100%;height:100%}
-
-/* Next button: bottom center, names the next slide (Thomas 2026-10-15, like the slides.com deck) */
-#nxt{position:fixed;left:50%;bottom:calc(2.2vh + 4px);transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:.55em;
-  padding:.62em 1.5em;border:2px solid rgba(255,255,255,.92);border-radius:999px;background:rgba(0,8,20,.72);backdrop-filter:blur(6px);
-  color:#fff;font-family:Montserrat,'Open Sans',sans-serif;font-weight:700;font-size:clamp(14px,1.75vw,24px);line-height:1;text-decoration:none;
-  cursor:pointer;white-space:nowrap;box-shadow:0 8px 28px rgba(0,0,0,.45);transition:transform .15s,background .15s;user-select:none}
-#nxt:hover{transform:translateX(-50%) scale(1.03);background:rgba(0,8,20,.9)}
-#nxt b{font-weight:400;opacity:.85}
-#nxt svg{width:1em;height:1em;flex:none;animation:nxtbob 1.6s ease-in-out infinite}
-#nxt.off{display:none}
-@keyframes nxtbob{0%,100%{transform:translateY(0)}50%{transform:translateY(.18em)}}
 </style>
 </head><body class="reveal-viewport theme-font-montserrat theme-color-black-blue">
 <div class="reveal">
@@ -137,7 +126,6 @@ html, body { background:#111; }
 		
 
 
-<a id="nxt" class="off" href="#"><span>Next</span><b>&middot;</b><span id="nxtt"></span><svg viewBox="0 0 24 24" fill="none" stroke="#ec008c" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M5 13l7 7 7-7"/></svg></a>
 <script src="../vendor/reveal.js"></script>
 <script>
 (function(){
@@ -155,14 +143,9 @@ html, body { background:#111; }
   }
   Reveal.initialize({ width:1280, height:720, margin:0.05, center:false, hash:true, controls:true, progress:false, viewDistance:1, mobileViewDistance:1, preloadIframes:false,
     transition:'slide', backgroundTransition:'slide', slideNumber:false, embedded:false, autoPlayMedia:true }).then(function(){
-    animateSlide(Reveal.getCurrentSlide()); nxt();
+    animateSlide(Reveal.getCurrentSlide());
   });
-  // Next button: title of the slide after the current one (the 7 slides are one vertical stack), hidden on the last slide
-  var NXT=["What we saw at "+document.title.replace(/^3DforScience for /,""),"One science story, every format","How we could help","More of our work","Who we are","Let's talk"];
-  var nb=document.getElementById('nxt'), nt=document.getElementById('nxtt');
-  function nxt(){ var x=Reveal.getIndices(), i=(x.h||0)+(x.v||0); if(i<NXT.length){ nt.textContent=NXT[i]; nb.classList.remove('off'); } else nb.classList.add('off'); }
-  nb.addEventListener('click',function(e){ e.preventDefault(); Reveal.next(); });
-  Reveal.on('slidechanged', function(e){ animateSlide(e.currentSlide); nxt(); });
+  Reveal.on('slidechanged', function(e){ animateSlide(e.currentSlide); });
 })();
 </script>
 </body></html>
