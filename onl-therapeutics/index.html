@@ -202,7 +202,8 @@
 
 		<script src="../v1-assets/unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
 	<script>setInterval(function(){document.querySelectorAll('[data-fit1]').forEach(function(el){
-var w=el.closest('.sl-block').offsetWidth;if(!w)return;el.style.whiteSpace='nowrap';var s=el.scrollWidth;if(!s)return;
-if(s>w*0.93)el.style.fontSize=(parseFloat(getComputedStyle(el).fontSize)*w/s*0.92)+'px';});},250);</script>
+var w=el.offsetWidth,r=el.getBoundingClientRect();if(!w||!r.width)return;el.style.whiteSpace='nowrap';
+var g=document.createRange();g.selectNodeContents(el.querySelector('p,h1,h2,h3')||el);var c=g.getBoundingClientRect().width*w/r.width;
+if(c>w*0.93)el.style.fontSize=(parseFloat(getComputedStyle(el).fontSize)*w/c*0.92)+'px';});},250);</script>
 </body>
 </html>
