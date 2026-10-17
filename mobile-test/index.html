@@ -54,76 +54,75 @@
 </style>
 		</head>
 	<body class="reveal-viewport theme-font-montserrat theme-color-black-blue">
-<!-- DFS MOBILE LAYER (2026-10-17): phones get one scrolling page built from the same copy and media; desktop stays David's deck untouched -->
+<!-- DFS MOBILE LAYER (2026-10-17): phones get 6 full-screen snap slides built from the same copy and media; desktop stays David's deck untouched -->
 <script>(function(){var sw=Math.min(screen.width||9999,screen.height||9999);if(!(sw<=700||matchMedia("(max-width:700px)").matches))return;document.documentElement.classList.add("dfsm");window.__dfsm=1;var m=document.querySelector('meta[name=viewport]');if(m)m.setAttribute('content','width=device-width, initial-scale=1, viewport-fit=cover');var l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap';document.head.appendChild(l);})();</script>
 <style>
 #dfsm{display:none}
-html.dfsm{overflow:auto!important;height:auto!important;background:#000}
+html.dfsm{overflow:auto!important;height:auto!important;background:#000;scroll-snap-type:y mandatory}
 html.dfsm body{overflow:visible!important;height:auto!important;min-height:100%;position:static!important;background:#000;margin:0;padding:0}
 html.dfsm body>*:not(#dfsm){display:none!important}
-html.dfsm #dfsm{display:block;position:relative;font-family:"Open Sans",Arial,sans-serif;color:#fff;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:92px}
+html.dfsm #dfsm{display:block;position:relative;font-family:"Open Sans",Arial,sans-serif;color:#fff;font-size:clamp(12.5px,1.85svh,15px);line-height:1.5;-webkit-font-smoothing:antialiased}
 #dfsm *{box-sizing:border-box}
 #dfsm .bg{position:fixed;inset:0;z-index:0;background:#000 url(../v1-assets/media/uploads/1343385/images/11760423/bg_corporative01.png) center/cover no-repeat}
-#dfsm .top{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:12px 18px 10px;background:rgba(0,0,0,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(237,0,140,.55)}
+#dfsm .top{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:12px 18px 10px;background:rgba(0,0,0,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(237,0,140,.55)}
 #dfsm .top img{height:22px;width:auto;display:block}
 #dfsm .top span{font-family:"Open Sans",sans-serif;font-size:8px;letter-spacing:3px;color:#d6d6d6;text-transform:uppercase;white-space:nowrap}
-#dfsm section{position:relative;z-index:1;padding:36px 20px 40px;scroll-margin-top:46px}
-#dfsm section+section{border-top:1px solid rgba(255,255,255,.08)}
+#dfsm section{position:relative;z-index:1;height:100vh;height:100svh;scroll-snap-align:start;scroll-snap-stop:always;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:58px 18px 76px}
 #dfsm h1,#dfsm h2,#dfsm h3{font-family:"Montserrat",Arial,sans-serif;margin:0}
-#dfsm h2{font-size:28px;line-height:1.15;font-weight:700;margin-bottom:6px}
-#dfsm h2:after{content:"";display:block;width:62px;height:3px;background:#ED008C;margin:14px 0 18px}
-#dfsm h3{font-size:16px;font-weight:700;letter-spacing:.2px}
-#dfsm p{margin:0 0 14px}
+#dfsm h2{font-size:clamp(21px,3.1svh,27px);line-height:1.15;font-weight:700}
+#dfsm h2:after{content:"";display:block;width:56px;height:3px;background:#ED008C;margin:1.2svh 0 1.6svh}
+#dfsm h3{font-size:clamp(13px,1.9svh,15.5px);font-weight:700;letter-spacing:.2px}
+#dfsm p{margin:0 0 1.4svh}
 #dfsm strong{font-weight:600}
 #dfsm a{color:#fff}
-#dfsm .hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:70px 22px 40px;overflow:hidden;text-align:center;scroll-margin-top:0}
+#dfsm .hero{padding:58px 22px 72px;text-align:center}
 #dfsm .hero video.bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.95}
 #dfsm .hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,.62) 55%,rgba(0,0,0,.9) 100%)}
 #dfsm .hero>*{position:relative;z-index:2}
-#dfsm .logos{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:28px}
-#dfsm .logos img{height:26px;width:auto;max-width:42vw;object-fit:contain}
+#dfsm .logos{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:3svh}
+#dfsm .logos img{height:clamp(20px,3svh,26px);width:auto;max-width:42vw;object-fit:contain}
 #dfsm .logos i{display:block;width:1px;height:34px;background:rgba(255,255,255,.7)}
-#dfsm .mh1{font-size:31px;line-height:1.18;font-weight:700;margin-bottom:22px}
-#dfsm .prep{font-size:15px;line-height:1.6;color:#eee}
-#dfsm .prep em{display:block;margin-top:10px;font-size:13px;color:#cfcfcf}
-#dfsm .carousel{margin:30px -22px 0;width:calc(100% + 44px)}
-#dfsm .carousel video{width:100%;display:block}
-#dfsm .contact{font-size:12px;color:#bdbdbd;margin:14px 0 0}
-#dfsm .shot{display:block;width:100%;border-radius:10px;border:1px solid rgba(255,255,255,.18);box-shadow:0 14px 40px rgba(0,0,0,.6);margin:6px 0 30px}
+#dfsm .mh1{font-size:clamp(24px,3.7svh,31px);line-height:1.18;font-weight:700;margin-bottom:2.4svh}
+#dfsm .prep{font-size:clamp(13px,1.8svh,15px);line-height:1.55;color:#eee}
+#dfsm .prep em{display:block;margin-top:1svh;font-size:clamp(11.5px,1.55svh,13px);color:#cfcfcf}
+#dfsm .carousel{margin:3svh -22px 0;width:calc(100% + 44px)}
+#dfsm .carousel video{width:100%;display:block;max-height:11svh;object-fit:cover}
+#dfsm .contact{font-size:clamp(11px,1.45svh,12.5px);color:#bdbdbd;margin:1.4svh 0 0}
+#dfsm .shot{display:block;width:100%;height:clamp(150px,24svh,230px);object-fit:cover;object-position:top;border-radius:10px;border:1px solid rgba(255,255,255,.18);box-shadow:0 14px 40px rgba(0,0,0,.6);margin:.4svh 0 2svh}
 #dfsm .omni{text-align:center}
-#dfsm .omni h3{font-size:18px;letter-spacing:.5px;margin-bottom:10px}
-#dfsm .omni img{width:100%;display:block}
-#dfsm .lead{font-size:18px;line-height:1.4;color:#f3f3f3;margin-bottom:26px}
-#dfsm .card{background:rgba(0,0,0,.52);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:18px 16px 16px;margin-bottom:18px}
-#dfsm .card h3{margin-bottom:6px}
-#dfsm .card>p{font-size:15px;color:#e4e4e4}
-#dfsm .tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px 10px;margin-top:14px}
+#dfsm .omni h3{font-size:clamp(13px,1.9svh,16px);letter-spacing:.6px;margin-bottom:.8svh}
+#dfsm .omni img{width:100%;height:clamp(120px,22svh,210px);object-fit:contain;display:block}
+#dfsm .lead{font-size:clamp(14px,2.1svh,17px);line-height:1.35;color:#f3f3f3;margin-bottom:2svh}
+#dfsm .card{background:rgba(0,0,0,.52);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:1.6svh 14px 1.5svh;margin-bottom:1.6svh}
+#dfsm .card h3{margin-bottom:.4svh}
+#dfsm .card>p{font-size:clamp(12px,1.65svh,13.5px);color:#e4e4e4;margin-bottom:1.1svh}
+#dfsm .tiles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
 #dfsm .tiles figure{margin:0}
-#dfsm .tiles video,#dfsm .tiles img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;border-radius:8px;background:#111}
-#dfsm .tiles figcaption{font-size:12.5px;color:#d9d9d9;margin-top:6px;line-height:1.3}
-#dfsm .work{background:rgba(0,0,0,.52);border:1px solid rgba(255,255,255,.14);border-radius:14px;overflow:hidden;margin-bottom:16px}
-#dfsm .work video{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#111}
-#dfsm .work .wb{padding:14px 16px 16px;position:relative}
-#dfsm .work .tag{position:absolute;top:-13px;left:16px;background:#ED008C;color:#fff;font-size:11px;font-weight:600;letter-spacing:.5px;padding:3px 10px;border-radius:999px}
-#dfsm .work h3{margin:6px 0 4px;font-size:17px}
-#dfsm .work p{font-size:14.5px;color:#e4e4e4;margin-bottom:10px}
-#dfsm .more{display:inline-block;font-size:13px;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:6px 14px}
-#dfsm .more b{color:#ED008C;font-weight:700;margin-left:6px}
-#dfsm .about{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:10px;margin:4px 0 22px;background:#111}
-#dfsm .quote{position:relative;background:rgba(0,0,0,.52);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:26px 18px 18px;margin-bottom:26px}
-#dfsm .quote:before{content:"\201C";position:absolute;top:-6px;left:14px;font-family:Georgia,serif;font-size:58px;line-height:1;color:#ED008C}
-#dfsm .quote p{font-style:italic;font-size:15px;color:#f0f0f0}
-#dfsm .who{display:flex;align-items:center;gap:10px;font-size:13.5px}
-#dfsm .who img{width:30px;height:30px;object-fit:contain}
+#dfsm .tiles video,#dfsm .tiles img{width:100%;height:clamp(54px,8.5svh,76px);object-fit:cover;display:block;border-radius:8px;background:#111}
+#dfsm .tiles figcaption{font-size:clamp(10.5px,1.4svh,12px);color:#d9d9d9;margin-top:4px;line-height:1.25}
+#dfsm .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 10px}
+#dfsm .work{display:block;background:rgba(0,0,0,.52);border:1px solid rgba(255,255,255,.14);border-radius:14px;overflow:hidden;text-decoration:none;color:#fff}
+#dfsm .work video{width:100%;height:clamp(84px,13.5svh,122px);object-fit:cover;display:block;background:#111}
+#dfsm .work .wb{padding:12px 12px 12px;position:relative}
+#dfsm .work .tag{position:absolute;top:-11px;left:12px;background:#ED008C;color:#fff;font-size:10px;font-weight:600;letter-spacing:.5px;padding:2px 9px;border-radius:999px}
+#dfsm .work h3{margin:3px 0 2px;font-size:clamp(13px,1.9svh,15.5px)}
+#dfsm .work p{font-size:clamp(11px,1.5svh,12.5px);color:#dcdcdc;margin:0 0 .6svh;line-height:1.35}
+#dfsm .work em{font-style:normal;font-size:clamp(11px,1.5svh,12.5px);font-weight:600}
+#dfsm .work em b{color:#ED008C;margin-left:4px}
+#dfsm .quote{position:relative;background:rgba(0,0,0,.52);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:2.2svh 16px 1.6svh;margin:.6svh 0 2.2svh}
+#dfsm .quote:before{content:"\201C";position:absolute;top:-6px;left:12px;font-family:Georgia,serif;font-size:50px;line-height:1;color:#ED008C}
+#dfsm .quote p{font-style:italic;font-size:clamp(12px,1.7svh,14px);color:#f0f0f0;line-height:1.45}
+#dfsm .who{display:flex;align-items:center;gap:10px;font-size:clamp(11.5px,1.55svh,13px)}
+#dfsm .who img{width:28px;height:28px;object-fit:contain}
 #dfsm .who em{display:block;color:#cfcfcf}
-#dfsm .badges h3{font-size:12px;letter-spacing:2px;color:#d6d6d6;text-align:center;margin-bottom:12px}
-#dfsm .badges .row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 18px;margin-bottom:26px}
-#dfsm .badges .row img{height:52px;width:auto;object-fit:contain}
-#dfsm .badges .row.members img{height:30px}
-#dfsm .book{display:inline-block;background:#ED008C;color:#fff;font-family:"Montserrat",sans-serif;font-weight:700;font-size:17px;text-decoration:none;padding:15px 30px;border-radius:999px;margin:4px 0 26px;box-shadow:0 10px 30px rgba(237,0,140,.35)}
-#dfsm .talk img.vis{width:100%;display:block;border-radius:10px;margin-bottom:24px}
-#dfsm .talk .logos{justify-content:flex-start;margin-bottom:14px}
-#dfsm .talk .contact{font-size:14px;color:#ddd}
+#dfsm .badges h3{font-size:clamp(10px,1.4svh,12px);letter-spacing:2px;color:#d6d6d6;text-align:center;margin-bottom:.9svh}
+#dfsm .badges .row{display:flex;flex-wrap:nowrap;justify-content:center;align-items:center;gap:10px 14px;margin-bottom:2svh}
+#dfsm .badges .row img{height:clamp(34px,5.6svh,48px);width:auto;max-width:18vw;object-fit:contain}
+#dfsm .badges .row.members img{height:clamp(18px,3svh,26px);max-width:28vw}
+#dfsm .book{display:inline-block;align-self:flex-start;background:#ED008C;color:#fff;font-family:"Montserrat",sans-serif;font-weight:700;font-size:clamp(15px,2.1svh,17px);text-decoration:none;padding:1.7svh 30px;border-radius:999px;margin:.4svh 0 2.6svh;box-shadow:0 10px 30px rgba(237,0,140,.35)}
+#dfsm .talk img.vis{width:100%;height:clamp(150px,25svh,230px);object-fit:cover;display:block;border-radius:10px;margin-bottom:2.4svh}
+#dfsm .talk .logos{justify-content:flex-start;margin-bottom:1.4svh}
+#dfsm .talk .contact{font-size:clamp(12px,1.7svh,14px);color:#ddd}
 #dfsm .pill{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:6;display:flex;align-items:center;gap:8px;max-width:calc(100vw - 32px);white-space:nowrap;background:rgba(0,0,0,.82);border:1px solid rgba(255,255,255,.7);border-radius:999px;padding:11px 18px;color:#fff;font-size:14px;font-weight:700;text-decoration:none;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:opacity .25s}
 #dfsm .pill b{color:#ED008C;font-size:18px;line-height:1}
 #dfsm .pill.off{opacity:0;pointer-events:none}
@@ -161,23 +160,23 @@ html.dfsm #dfsm{display:block;position:relative;font-family:"Open Sans",Arial,sa
 <div class="tiles">
 <figure><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/iZtZUf0M/elearning_video01_comp_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/iZtZUf0M/elearning_video01_comp.mp4"></video><figcaption>E-learning</figcaption></figure>
 <figure><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/k2tRjycH/avatar_video01_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/k2tRjycH/avatar_video01.mp4"></video><figcaption>AI avatar</figcaption></figure>
-<figure><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/DNIwLoy7/vr-video-lateral-section-01_comp_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/DNIwLoy7/vr-video-lateral-section-01_comp.mp4"></video><figcaption>Immersive</figcaption></figure>
-<figure><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/FIZNHBmE/congress_video01_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/FIZNHBmE/congress_video01.mp4"></video><figcaption>Congresses / Conferences</figcaption></figure>
+<figure><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/FIZNHBmE/congress_video01_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/FIZNHBmE/congress_video01.mp4"></video><figcaption>Congresses</figcaption></figure>
 </div></div>
 </section>
 
 <section data-n="4" data-title="Who we are">
 <h2>More of our work</h2>
-<div class="work"><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/mGSaPvS-/anavex_casestudies_makingoff__98pct_smaller_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/mGSaPvS-/anavex_casestudies_makingoff__98pct_smaller.mp4"></video><div class="wb"><span class="tag">Animation</span><h3>Anavex</h3><p>Mechanisms and pathways your audience can follow.</p><a class="more" href="https://3dforscience.com/projects/case-study-anavex/" target="_blank" rel="noopener">View more<b>&rarr;</b></a></div></div>
-<div class="work"><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/_kVhzidM/case_studies_alexion-1__1__mobile_poster.jpg" src="../v1-assets/media/videos/1343385/_kVhzidM/case_studies_alexion-1__1_.mp4"></video><div class="wb"><span class="tag">E-learning</span><h3>Alexion</h3><p>Interactive training with AI avatars, gamification and clinical cases.</p><a class="more" href="https://3dforscience.com/projects/case-study-alexion/" target="_blank" rel="noopener">View more<b>&rarr;</b></a></div></div>
-<div class="work"><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/hIXhrIPV/abbvie_video_section01_comp_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/hIXhrIPV/abbvie_video_section01_comp.mp4"></video><div class="wb"><span class="tag">Immersive</span><h3>AbbVie</h3><p>VR, AR and 360 experiences that put HCPs inside the science.</p><a class="more" href="https://3dforscience.com/projects/abbvie-ar/" target="_blank" rel="noopener">View more<b>&rarr;</b></a></div></div>
-<div class="work"><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/1BUnyaoA/deiopharm_video012_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/1BUnyaoA/deiopharm_video012.mp4"></video><div class="wb"><span class="tag">Congress</span><h3>Debiopharm</h3><p>Interactive walls and booth experiences built from your science.</p><a class="more" href="https://3dforscience.com/projects/debiopharm-interactive-wall/" target="_blank" rel="noopener">View more<b>&rarr;</b></a></div></div>
+<div class="grid">
+<a class="work" href="https://3dforscience.com/projects/case-study-anavex/" target="_blank" rel="noopener"><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/mGSaPvS-/anavex_casestudies_makingoff__98pct_smaller_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/mGSaPvS-/anavex_casestudies_makingoff__98pct_smaller.mp4"></video><div class="wb"><span class="tag">Animation</span><h3>Anavex</h3><p>Mechanisms and pathways your audience can follow.</p><em>View more<b>&rarr;</b></em></div></a>
+<a class="work" href="https://3dforscience.com/projects/case-study-alexion/" target="_blank" rel="noopener"><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/_kVhzidM/case_studies_alexion-1__1__mobile_poster.jpg" src="../v1-assets/media/videos/1343385/_kVhzidM/case_studies_alexion-1__1_.mp4"></video><div class="wb"><span class="tag">E-learning</span><h3>Alexion</h3><p>Training with AI avatars, gamification and clinical cases.</p><em>View more<b>&rarr;</b></em></div></a>
+<a class="work" href="https://3dforscience.com/projects/abbvie-ar/" target="_blank" rel="noopener"><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/hIXhrIPV/abbvie_video_section01_comp_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/hIXhrIPV/abbvie_video_section01_comp.mp4"></video><div class="wb"><span class="tag">Immersive</span><h3>AbbVie</h3><p>VR, AR and 360 experiences inside the science.</p><em>View more<b>&rarr;</b></em></div></a>
+<a class="work" href="https://3dforscience.com/projects/debiopharm-interactive-wall/" target="_blank" rel="noopener"><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/1BUnyaoA/deiopharm_video012_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/1BUnyaoA/deiopharm_video012.mp4"></video><div class="wb"><span class="tag">Congress</span><h3>Debiopharm</h3><p>Interactive walls and booth experiences.</p><em>View more<b>&rarr;</b></em></div></a>
+</div>
 </section>
 
 <section data-n="5" data-title="Let&rsquo;s talk">
 <h2>Who we are</h2>
 <p>3DforScience is an award-winning scientific communications agency working worldwide, supporting life sciences companies to transform complex science into compelling visual stories that drive understanding and action for every audience that matters, from investors to KOLs.</p>
-<video class="about" muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/An_eLZBe/3dfs_web_about_us_video_section_01_comp_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/An_eLZBe/3dfs_web_about_us_video_section_01_comp.mp4"></video>
 <div class="quote"><p>Working with 3DforScience has been a game-changer for us. Their ability to translate complex science into a visually stunning narrative is unmatched. The final animation not only met but exceeded our expectations, and we look forward to future collaborations.</p>
 <div class="who"><img src="../v1-assets/media/uploads/1343385/images/13114460/image.png" alt=""><div><strong>Anavex</strong><em>President and CEO, Anavex Life Sciences</em></div></div></div>
 <div class="badges"><h3>AWARDS</h3><div class="row"><img src="../v1-assets/media/uploads/1343385/images/13114647/image.png" alt=""><img src="../v1-assets/media/uploads/1343385/images/13114646/image.png" alt=""><img src="../v1-assets/media/uploads/1343385/images/13114441/image.png" alt=""><img src="../v1-assets/media/uploads/1343385/images/13114442/image.png" alt=""><img src="../v1-assets/media/uploads/1343385/images/13114443/image.png" alt=""></div>
@@ -194,7 +193,7 @@ html.dfsm #dfsm{display:block;position:relative;font-family:"Open Sans",Arial,sa
 
 <a class="pill" href="#" id="dfsmpill">Next · <span>What we saw at Novonesis</span> <b>&darr;</b></a>
 <script>(function(){if(!window.__dfsm)return;var secs=[].slice.call(document.querySelectorAll('#dfsm section')),pill=document.getElementById('dfsmpill'),cur=0;window.__dfsmMax=1;
-function show(i){cur=i;if(i+1>window.__dfsmMax)window.__dfsmMax=i+1;var t=secs[i].getAttribute('data-title');if(!t){pill.classList.add('off');return}pill.classList.remove('off');pill.querySelector('span').textContent=t;if(i+1>window.__dfsmMax)window.__dfsmMax=i+1}
+function show(i){cur=i;if(i+1>window.__dfsmMax)window.__dfsmMax=i+1;var t=secs[i].getAttribute('data-title');if(!t){pill.classList.add('off');return}pill.classList.remove('off');pill.querySelector('span').textContent=t}
 pill.addEventListener('click',function(e){e.preventDefault();var n=secs[Math.min(cur+1,secs.length-1)];n.scrollIntoView({behavior:'smooth',block:'start'})});
 var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting)show(secs.indexOf(x.target))})},{rootMargin:'-45% 0px -45% 0px'});secs.forEach(function(s){io.observe(s)});
 var vo=new IntersectionObserver(function(es){es.forEach(function(x){var v=x.target;if(x.isIntersecting){if(v.preload==='none')v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{rootMargin:'120px 0px'});document.querySelectorAll('#dfsm video').forEach(function(v){vo.observe(v)});
