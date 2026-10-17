@@ -90,12 +90,12 @@ html.dfsm #dfsm{display:block;position:relative;font-family:"Open Sans",Arial,sa
 #dfsm .carousel{width:100%;margin-top:2svh;position:static}
 #dfsm .carousel video{width:100%;height:auto;display:block;mix-blend-mode:screen}
 #dfsm .contact{font-size:clamp(11px,1.45svh,12.5px);color:#bdbdbd;margin:1.4svh 22px 0}
-#dfsm .shot{display:block;width:100%;height:clamp(110px,16svh,160px);object-fit:cover;object-position:top;border-radius:10px;border:1px solid rgba(255,255,255,.18);box-shadow:0 14px 40px rgba(0,0,0,.6);margin:.4svh 0 2svh}
+#dfsm .shot{display:block;width:auto;height:auto;max-width:100%;max-height:26svh;margin:.4svh auto 1.2svh;border-radius:10px;border:1px solid rgba(255,255,255,.18);box-shadow:0 14px 40px rgba(0,0,0,.6)}
 #dfsm .omni{text-align:center}
 #dfsm .omni h3{font-size:clamp(13px,1.9svh,16px);letter-spacing:.6px;margin-bottom:.8svh}
 #dfsm .omni{margin:0 -18px}
-#dfsm .omni img{display:block;width:107vw;max-width:none;height:auto;margin-left:-3.5vw}
-@media (max-height:700px){#dfsm .omni img{width:auto;height:30svh;margin:0 auto}}
+#dfsm .omni{flex:1 1 auto;min-height:0;display:flex;flex-direction:column}
+#dfsm .omni img{flex:1 1 auto;min-height:0;width:105vw;max-width:none;height:0;max-height:calc(105vw * 1350 / 1894);object-fit:contain;object-position:50% 0;margin-left:-2.5vw}
 #dfsm .lead{font-size:clamp(13px,1.9svh,16px);line-height:1.35;color:#f3f3f3;margin-bottom:1.6svh}
 #dfsm .card{background:rgba(0,0,0,.52);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:1.6svh 14px 1.5svh;margin-bottom:1.6svh}
 #dfsm .card h3{margin-bottom:.4svh}
