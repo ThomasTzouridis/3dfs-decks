@@ -75,30 +75,30 @@ html.dfsm #dfsm{display:block;position:relative;font-family:"Open Sans",Arial,sa
 #dfsm p{margin:0 0 1.4svh}
 #dfsm strong{font-weight:600}
 #dfsm a{color:#fff}
-#dfsm .hero{padding:58px 22px 72px;text-align:center}
-#dfsm .hero video.bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.95}
-#dfsm .hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,.62) 55%,rgba(0,0,0,.9) 100%)}
-#dfsm .hero>*{position:relative;z-index:2}
-#dfsm .logos{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:3svh}
-#dfsm .logos img{height:clamp(20px,3svh,26px);width:auto;max-width:42vw;object-fit:contain}
+#dfsm .hero{padding:44px 0 72px;text-align:center;justify-content:flex-start}
+#dfsm .hero .hv{width:100%;aspect-ratio:16/9;max-height:30svh;overflow:hidden;background:#000}
+#dfsm .hero .hv video{width:100%;height:100%;object-fit:cover;display:block}
+#dfsm .hero .mid{margin:auto 22px;padding:2svh 0}
+#dfsm .logos{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:2.4svh}
+#dfsm .logos img,#dfsm .logos svg{height:clamp(20px,3svh,26px);width:auto;max-width:42vw;object-fit:contain;display:block}
 #dfsm .logos i{display:block;width:1px;height:34px;background:rgba(255,255,255,.7)}
-#dfsm .mh1{font-size:clamp(24px,3.7svh,31px);line-height:1.18;font-weight:700;margin-bottom:2.4svh}
+#dfsm .mh1{font-size:clamp(23px,3.5svh,30px);line-height:1.18;font-weight:700;margin-bottom:2svh}
 #dfsm .prep{font-size:clamp(13px,1.8svh,15px);line-height:1.55;color:#eee}
 #dfsm .prep em{display:block;margin-top:1svh;font-size:clamp(11.5px,1.55svh,13px);color:#cfcfcf}
-#dfsm .carousel{margin:3svh -22px 0;width:calc(100% + 44px)}
-#dfsm .carousel video{width:100%;display:block;max-height:11svh;object-fit:cover}
-#dfsm .contact{font-size:clamp(11px,1.45svh,12.5px);color:#bdbdbd;margin:1.4svh 0 0}
-#dfsm .shot{display:block;width:100%;height:clamp(150px,24svh,230px);object-fit:cover;object-position:top;border-radius:10px;border:1px solid rgba(255,255,255,.18);box-shadow:0 14px 40px rgba(0,0,0,.6);margin:.4svh 0 2svh}
+#dfsm .carousel{width:100%}
+#dfsm .carousel video{width:100%;height:auto;display:block}
+#dfsm .contact{font-size:clamp(11px,1.45svh,12.5px);color:#bdbdbd;margin:1.4svh 22px 0}
+#dfsm .shot{display:block;width:100%;height:clamp(120px,18svh,170px);object-fit:cover;object-position:top;border-radius:10px;border:1px solid rgba(255,255,255,.18);box-shadow:0 14px 40px rgba(0,0,0,.6);margin:.4svh 0 2svh}
 #dfsm .omni{text-align:center}
 #dfsm .omni h3{font-size:clamp(13px,1.9svh,16px);letter-spacing:.6px;margin-bottom:.8svh}
-#dfsm .omni img{width:100%;height:clamp(120px,22svh,210px);object-fit:contain;display:block}
-#dfsm .lead{font-size:clamp(14px,2.1svh,17px);line-height:1.35;color:#f3f3f3;margin-bottom:2svh}
+#dfsm .omni img{width:100%;height:clamp(180px,31svh,300px);object-fit:contain;display:block}
+#dfsm .lead{font-size:clamp(13px,1.9svh,16px);line-height:1.35;color:#f3f3f3;margin-bottom:1.6svh}
 #dfsm .card{background:rgba(0,0,0,.52);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:1.6svh 14px 1.5svh;margin-bottom:1.6svh}
 #dfsm .card h3{margin-bottom:.4svh}
 #dfsm .card>p{font-size:clamp(12px,1.65svh,13.5px);color:#e4e4e4;margin-bottom:1.1svh}
 #dfsm .tiles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
 #dfsm .tiles figure{margin:0}
-#dfsm .tiles video,#dfsm .tiles img{width:100%;height:clamp(54px,8.5svh,76px);object-fit:cover;display:block;border-radius:8px;background:#111}
+#dfsm .tiles video,#dfsm .tiles img{width:100%;height:clamp(72px,11.5svh,104px);object-fit:cover;display:block;border-radius:8px;background:#111}
 #dfsm .tiles figcaption{font-size:clamp(10.5px,1.4svh,12px);color:#d9d9d9;margin-top:4px;line-height:1.25}
 #dfsm .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 10px}
 #dfsm .work{display:block;background:rgba(0,0,0,.52);border:1px solid rgba(255,255,255,.14);border-radius:14px;overflow:hidden;text-decoration:none;color:#fff}
@@ -120,7 +120,7 @@ html.dfsm #dfsm{display:block;position:relative;font-family:"Open Sans",Arial,sa
 #dfsm .badges .row img{height:clamp(34px,5.6svh,48px);width:auto;max-width:18vw;object-fit:contain}
 #dfsm .badges .row.members img{height:clamp(18px,3svh,26px);max-width:28vw}
 #dfsm .book{display:inline-block;align-self:flex-start;background:#ED008C;color:#fff;font-family:"Montserrat",sans-serif;font-weight:700;font-size:clamp(15px,2.1svh,17px);text-decoration:none;padding:1.7svh 30px;border-radius:999px;margin:.4svh 0 2.6svh;box-shadow:0 10px 30px rgba(237,0,140,.35)}
-#dfsm .talk img.vis{width:100%;height:clamp(150px,25svh,230px);object-fit:cover;display:block;border-radius:10px;margin-bottom:2.4svh}
+#dfsm .talk img.vis{width:100%;height:auto;max-height:clamp(150px,27svh,240px);object-fit:cover;object-position:50% 0;display:block;border-radius:10px;margin-bottom:2.4svh}
 #dfsm .talk .logos{justify-content:flex-start;margin-bottom:1.4svh}
 #dfsm .talk .contact{font-size:clamp(12px,1.7svh,14px);color:#ddd}
 #dfsm .pill{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:6;display:flex;align-items:center;gap:8px;max-width:calc(100vw - 32px);white-space:nowrap;background:rgba(0,0,0,.82);border:1px solid rgba(255,255,255,.7);border-radius:999px;padding:11px 18px;color:#fff;font-size:14px;font-weight:700;text-decoration:none;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:opacity .25s}
@@ -132,10 +132,12 @@ html.dfsm #dfsm{display:block;position:relative;font-family:"Open Sans",Arial,sa
 <div class="top"><img src="../v1-assets/media/uploads/1343385/images/11585369/pasted-from-clipboard.png" alt="3DforScience"><span>Innovation fueled by creativity</span></div>
 
 <section class="hero" data-n="1" data-title="What we saw at Novonesis">
-<video class="bgv" muted loop playsinline preload="metadata" poster="../v1-assets/media/videos/1343385/oKbqheKG/0904__77pct_smaller_thumb_00001.jpg" src="../v1-assets/media/videos/1343385/oKbqheKG/0904__77pct_smaller.mp4"></video>
-<div class="logos"><img src="../v1-assets/media/uploads/1343385/images/11585369/pasted-from-clipboard.png" alt="3DforScience"><i></i><img src="logo.svg" alt="Novonesis" style="filter:brightness(0) invert(1)"></div>
+<div class="hv"><video muted loop playsinline preload="metadata" poster="../v1-assets/media/videos/1343385/oKbqheKG/0904__77pct_smaller_thumb_00001.jpg" src="../v1-assets/media/videos/1343385/oKbqheKG/0904__77pct_smaller.mp4"></video></div>
+<div class="mid">
+<div class="logos"><img src="../v1-assets/media/uploads/1343385/images/11585369/pasted-from-clipboard.png" alt="3DforScience"><i></i><img class="cl" src="logo.svg" alt="Novonesis" style="filter:brightness(0) invert(1)"></div>
 <h1 class="mh1">Make Novonesis's science clear to investors and partners.</h1>
 <p class="prep">Proposal prepared for Julie Gattaz · Novonesis<br>Prepared by David Torrico.<em>4 minute read. No commercial proposal attached.</em></p>
+</div>
 <div class="carousel"><video muted loop playsinline preload="metadata" poster="../v1-assets/media/videos/1343385/n3aV83wH/logos_clientes_carrusel_2025_thumb_00001.jpg" src="../v1-assets/media/videos/1343385/n3aV83wH/logos_clientes_carrusel_2025.mp4"></video></div>
 <p class="contact"><strong>3dforscience</strong>.com · info@<strong>3dforscience</strong>.com</p>
 </section>
@@ -187,7 +189,7 @@ html.dfsm #dfsm{display:block;position:relative;font-family:"Open Sans",Arial,sa
 <h2>Let's talk</h2>
 <a class="book" href="https://bookings.cloud.microsoft/book/Gc423f442db11437c8ce3595763d92de8@3dforscience.com/?ismsaljsauthenabled=true" target="_blank" rel="noopener">Book a call</a>
 <img class="vis" src="../v1-assets/media/uploads/1343385/images/13114486/image.png" alt="">
-<div class="logos"><img src="../v1-assets/media/uploads/1343385/images/11585369/pasted-from-clipboard.png" alt="3DforScience"><i></i><img src="logo.svg" alt="Novonesis" style="filter:brightness(0) invert(1)"></div>
+<div class="logos"><img src="../v1-assets/media/uploads/1343385/images/11585369/pasted-from-clipboard.png" alt="3DforScience"><i></i><img class="cl" src="logo.svg" alt="Novonesis" style="filter:brightness(0) invert(1)"></div>
 <p class="contact"><strong>3dforscience</strong>.com · info@<strong>3dforscience</strong>.com<br>+34 91 016 43 92 / +1 845-402-0422</p>
 </section>
 
@@ -196,6 +198,7 @@ html.dfsm #dfsm{display:block;position:relative;font-family:"Open Sans",Arial,sa
 function show(i){cur=i;if(i+1>window.__dfsmMax)window.__dfsmMax=i+1;var t=secs[i].getAttribute('data-title');if(!t){pill.classList.add('off');return}pill.classList.remove('off');pill.querySelector('span').textContent=t}
 pill.addEventListener('click',function(e){e.preventDefault();var n=secs[Math.min(cur+1,secs.length-1)];n.scrollIntoView({behavior:'smooth',block:'start'})});
 var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting)show(secs.indexOf(x.target))})},{rootMargin:'-45% 0px -45% 0px'});secs.forEach(function(s){io.observe(s)});
+document.querySelectorAll('#dfsm img.cl').forEach(function(im){var s=im.getAttribute('src')||'';if(!/\.svg(\?|$)/i.test(s))return;fetch(s).then(function(r){return r.text()}).then(function(x){var d=new DOMParser().parseFromString(x,'image/svg+xml').documentElement;if(!d||d.nodeName!=='svg')return;d.removeAttribute('width');d.removeAttribute('height');d.removeAttribute('class');d.setAttribute('fill','#fff');d.querySelectorAll('[fill]').forEach(function(e){var f=e.getAttribute('fill');if(f&&f!=='none')e.setAttribute('fill','#fff')});d.querySelectorAll('[stroke]').forEach(function(e){var f=e.getAttribute('stroke');if(f&&f!=='none')e.setAttribute('stroke','#fff')});d.querySelectorAll('style').forEach(function(e){e.remove()});im.parentNode.replaceChild(d,im)}).catch(function(){})});
 var vo=new IntersectionObserver(function(es){es.forEach(function(x){var v=x.target;if(x.isIntersecting){if(v.preload==='none')v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{rootMargin:'120px 0px'});document.querySelectorAll('#dfsm video').forEach(function(v){vo.observe(v)});
 })();</script>
 </div>
