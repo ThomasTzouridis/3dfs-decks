@@ -54,6 +54,160 @@
 </style>
 		</head>
 	<body class="reveal-viewport theme-font-montserrat theme-color-black-blue">
+<!-- DFS MOBILE LAYER (2026-10-17): phones get 6 full-screen snap slides built from the same copy and media; desktop stays David's deck untouched -->
+<script>(function(){var sw=Math.min(screen.width||9999,screen.height||9999);if(!(sw<=700||matchMedia("(max-width:700px)").matches))return;document.documentElement.classList.add("dfsm");window.__dfsm=1;var m=document.querySelector('meta[name=viewport]');if(m)m.setAttribute('content','width=device-width, initial-scale=1, viewport-fit=cover');var l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap';document.head.appendChild(l);})();</script>
+<style>
+#dfsm{display:none}
+html.dfsm{overflow:auto!important;height:auto!important;background:#000;scroll-snap-type:y mandatory}
+html.dfsm body{overflow:visible!important;height:auto!important;min-height:100%;position:static!important;background:transparent!important;margin:0;padding:0}
+html.dfsm body>*:not(#dfsm){display:none!important}
+html.dfsm #dfsm{display:block;position:relative;font-family:"Open Sans",Arial,sans-serif;color:#fff;font-size:clamp(12.5px,1.85svh,15px);line-height:1.5;-webkit-font-smoothing:antialiased}
+#dfsm *{box-sizing:border-box}
+#dfsm .bg{position:fixed;inset:0;z-index:-1;background:#000 url(../v1-assets/media/uploads/1343385/images/11760423/bg_corporative01.png) center/cover no-repeat}
+#dfsm .top{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:12px 18px 10px;background:rgba(0,0,0,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(237,0,140,.55)}
+#dfsm .top img{height:22px;width:auto;display:block}
+#dfsm .top span{font-family:"Open Sans",sans-serif;font-size:8px;letter-spacing:3px;color:#d6d6d6;text-transform:uppercase;white-space:nowrap}
+#dfsm section{position:relative;height:100vh;height:100svh;scroll-snap-align:start;scroll-snap-stop:always;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:58px 18px 76px}
+#dfsm h1,#dfsm h2,#dfsm h3{font-family:"Montserrat",Arial,sans-serif;margin:0}
+#dfsm h2{font-size:clamp(21px,3.1svh,27px);line-height:1.15;font-weight:700}
+#dfsm h2:after{content:"";display:block;width:56px;height:3px;background:#ED008C;margin:1.2svh 0 1.6svh}
+#dfsm h3{font-size:clamp(13px,1.9svh,15.5px);font-weight:700;letter-spacing:.2px}
+#dfsm p{margin:0 0 1.4svh}
+#dfsm strong{font-weight:600}
+#dfsm a{color:#fff}
+#dfsm .hero{padding:44px 0 72px;text-align:center;justify-content:center}
+#dfsm .hero .hv{position:absolute;left:0;right:0;top:44px;height:50svh;overflow:hidden;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 100%)}
+#dfsm .hero .hv video{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block}
+#dfsm .hero .hv:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.45) 45%,rgba(0,0,0,.7) 100%)}
+#dfsm .hero>.mid,#dfsm .hero>.contact{position:relative}
+#dfsm .hero .mid{margin:0 22px;padding:2svh 0;text-shadow:0 2px 14px rgba(0,0,0,.75)}
+#dfsm .logos{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:2.4svh}
+#dfsm .logos img,#dfsm .logos svg{height:clamp(20px,3svh,26px);width:auto;max-width:42vw;object-fit:contain;display:block}
+#dfsm .logos i{display:block;width:1px;height:34px;background:rgba(255,255,255,.7)}
+#dfsm .mh1{font-size:clamp(23px,3.5svh,30px);line-height:1.18;font-weight:700;margin-bottom:2svh}
+#dfsm .prep{font-size:clamp(13px,1.8svh,15px);line-height:1.55;color:#eee}
+#dfsm .prep em{display:block;margin-top:1svh;font-size:clamp(11.5px,1.55svh,13px);color:#cfcfcf}
+#dfsm .carousel{width:100%;margin-top:2svh;position:static}
+#dfsm .carousel video{width:100%;height:auto;display:block;mix-blend-mode:screen}
+#dfsm .contact{font-size:clamp(11px,1.45svh,12.5px);color:#bdbdbd;margin:1.4svh 22px 0}
+#dfsm .shot{display:block;width:auto;height:auto;max-width:100%;max-height:26svh;margin:.4svh auto 1.2svh;border-radius:10px;border:1px solid rgba(255,255,255,.18);box-shadow:0 14px 40px rgba(0,0,0,.6)}
+#dfsm .omni{text-align:center}
+#dfsm .omni h3{font-size:clamp(13px,1.9svh,16px);letter-spacing:.6px;margin-bottom:.8svh}
+#dfsm .omni{margin:0 -18px}
+#dfsm section[data-n="2"]{padding-bottom:60px}
+#dfsm .omni{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;margin-bottom:-14px}
+#dfsm .omni img{flex:1 1 auto;min-height:0;width:105vw;max-width:none;height:0;max-height:calc(105vw * 1350 / 1894);object-fit:contain;object-position:50% 100%;margin-left:-2.5vw}
+#dfsm .lead{font-size:clamp(13px,1.9svh,16px);line-height:1.35;color:#f3f3f3;margin-bottom:1.6svh}
+#dfsm .card{background:rgba(0,0,0,.52);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:1.6svh 14px 1.5svh;margin-bottom:1.6svh}
+#dfsm .card h3{margin-bottom:.4svh}
+#dfsm .card>p{font-size:clamp(12px,1.65svh,13.5px);color:#e4e4e4;margin-bottom:1.1svh}
+#dfsm .tiles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+#dfsm .tiles figure{margin:0}
+#dfsm .tiles video,#dfsm .tiles img{width:100%;height:clamp(72px,11.5svh,104px);object-fit:cover;display:block;border-radius:8px;background:#111}
+#dfsm .tiles figcaption{font-size:clamp(10.5px,1.4svh,12px);color:#d9d9d9;margin-top:4px;line-height:1.25}
+#dfsm .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 10px}
+#dfsm .work{display:block;background:rgba(0,0,0,.52);border:1px solid rgba(255,255,255,.14);border-radius:14px;overflow:hidden;text-decoration:none;color:#fff}
+#dfsm .work video{width:100%;height:clamp(84px,13.5svh,122px);object-fit:cover;display:block;background:#111}
+#dfsm .work .wb{padding:12px 12px 12px;position:relative}
+#dfsm .work .tag{position:absolute;top:-11px;left:12px;background:#ED008C;color:#fff;font-size:10px;font-weight:600;letter-spacing:.5px;padding:2px 9px;border-radius:999px}
+#dfsm .work h3{margin:3px 0 2px;font-size:clamp(13px,1.9svh,15.5px)}
+#dfsm .work p{font-size:clamp(11px,1.5svh,12.5px);color:#dcdcdc;margin:0 0 .6svh;line-height:1.35}
+#dfsm .work em{font-style:normal;font-size:clamp(11px,1.5svh,12.5px);font-weight:600}
+#dfsm .work em b{color:#ED008C;margin-left:4px}
+#dfsm .quote{position:relative;background:rgba(0,0,0,.52);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:2.2svh 16px 1.6svh;margin:.6svh 0 2.2svh}
+#dfsm .quote:before{content:"\201C";position:absolute;top:-6px;left:12px;font-family:Georgia,serif;font-size:50px;line-height:1;color:#ED008C}
+#dfsm .quote p{font-style:italic;font-size:clamp(12px,1.7svh,14px);color:#f0f0f0;line-height:1.45}
+#dfsm .who{display:flex;align-items:center;gap:10px;font-size:clamp(11.5px,1.55svh,13px)}
+#dfsm .who img{width:28px;height:28px;object-fit:contain}
+#dfsm .who em{display:block;color:#cfcfcf}
+#dfsm .badges h3{font-size:clamp(10px,1.4svh,12px);letter-spacing:2px;color:#d6d6d6;text-align:center;margin-bottom:.9svh}
+#dfsm .badges .row{display:flex;flex-wrap:nowrap;justify-content:center;align-items:center;gap:10px 14px;margin-bottom:2svh}
+#dfsm .badges .row img{height:clamp(34px,5.6svh,48px);width:auto;max-width:18vw;object-fit:contain}
+#dfsm .badges .row.members img{height:clamp(18px,3svh,26px);max-width:28vw}
+#dfsm .book{display:inline-block;align-self:flex-start;background:#ED008C;color:#fff;font-family:"Montserrat",sans-serif;font-weight:700;font-size:clamp(15px,2.1svh,17px);text-decoration:none;padding:1.7svh 30px;border-radius:999px;margin:.4svh 0 2.6svh;box-shadow:0 10px 30px rgba(237,0,140,.35)}
+#dfsm .talk img.vis{width:100%;height:auto;max-height:clamp(150px,27svh,240px);object-fit:cover;object-position:50% 0;display:block;border-radius:10px;margin-bottom:2.4svh}
+#dfsm .talk .logos{justify-content:flex-start;margin-bottom:1.4svh}
+#dfsm .talk .contact{font-size:clamp(12px,1.7svh,14px);color:#ddd}
+#dfsm .pill{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:6;display:flex;align-items:center;gap:8px;max-width:calc(100vw - 32px);white-space:nowrap;background:rgba(0,0,0,.82);border:1px solid rgba(255,255,255,.7);border-radius:999px;padding:11px 18px;color:#fff;font-size:14px;font-weight:700;text-decoration:none;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:opacity .25s}
+#dfsm .pill b{color:#ED008C;font-size:18px;line-height:1}
+#dfsm .pill.off{opacity:0;pointer-events:none}
+</style>
+<div id="dfsm">
+<div class="bg"></div>
+<div class="top"><img src="../v1-assets/media/uploads/1343385/images/11585369/pasted-from-clipboard.png" alt="3DforScience"><span>Innovation fueled by creativity</span></div>
+
+<section class="hero" data-n="1" data-title="What we saw at Sarepta">
+<div class="hv"><video muted loop playsinline preload="metadata" poster="../v1-assets/media/videos/1343385/oKbqheKG/0904__77pct_smaller_thumb_00001.jpg" src="../v1-assets/media/videos/1343385/oKbqheKG/0904__77pct_smaller.mp4"></video></div>
+<div class="mid">
+<div class="logos"><img src="../v1-assets/media/uploads/1343385/images/11585369/pasted-from-clipboard.png" alt="3DforScience"><i></i><img class="cl" src="logo.png" alt="Sarepta" style="filter:brightness(0) invert(1)"></div>
+<h1 class="mh1">Make Sarepta's science clear to investors and partners.</h1>
+<p class="prep">Proposal prepared for Valerie Shea · Sarepta<br>Prepared by Natalia Aguilar Bosch.<em>4 minute read. No commercial proposal attached.</em></p>
+</div>
+<div class="carousel"><video muted loop playsinline preload="metadata" poster="../v1-assets/media/videos/1343385/n3aV83wH/logos_clientes_carrusel_2025_thumb_00001.jpg" src="../v1-assets/media/videos/1343385/n3aV83wH/logos_clientes_carrusel_2025.mp4"></video></div>
+<p class="contact"><strong>3dforscience</strong>.com · info@<strong>3dforscience</strong>.com</p>
+</section>
+
+<section data-n="2" data-title="How we could help">
+<h2>What we saw at Sarepta</h2>
+<p>Sarepta is advancing science in rare genetic diseases. For investors, partners and KOLs, the hardest part is <strong>making a mechanism clear in a short meeting</strong>. That is where mechanistic clarity and the right <strong>visuals make the difference.</strong></p>
+<img class="shot" src="shot.jpg" alt="Sarepta website">
+<div class="omni"><h3>SCALABLE, MODULAR, OMNICHANNEL</h3><img src="../v1-assets/media/uploads/1343385/images/13114697/image.png" alt=""></div>
+</section>
+
+<section data-n="3" data-title="More of our work">
+<h2>How we could help</h2>
+<p class="lead">Build the science once. Engage every HCP, in every channel.</p>
+<div class="card"><h3>Scientific communication materials</h3><p>MoA animation, scientific illustration and interactive materials that make the mechanism clear.</p>
+<div class="tiles">
+<figure><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/cwbmppIX/3dfs_web_animation_video_section02_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/cwbmppIX/3dfs_web_animation_video_section02.mp4"></video><figcaption>MoA animation</figcaption></figure>
+<figure><img src="../v1-assets/media/uploads/1343385/images/13114599/image.png" alt=""><figcaption>Scientific illustration</figcaption></figure>
+<figure><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/aICiBIaZ/interactive_video03_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/aICiBIaZ/interactive_video03.mp4"></video><figcaption>Interactive material</figcaption></figure>
+</div></div>
+<div class="card"><h3>Medical engagement and training</h3><p>E-learning with AI avatars, immersive experiences and congress tools that keep HCPs engaged.</p>
+<div class="tiles">
+<figure><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/iZtZUf0M/elearning_video01_comp_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/iZtZUf0M/elearning_video01_comp.mp4"></video><figcaption>E-learning</figcaption></figure>
+<figure><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/k2tRjycH/avatar_video01_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/k2tRjycH/avatar_video01.mp4"></video><figcaption>AI avatar</figcaption></figure>
+<figure><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/FIZNHBmE/congress_video01_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/FIZNHBmE/congress_video01.mp4"></video><figcaption>Congresses</figcaption></figure>
+</div></div>
+</section>
+
+<section data-n="4" data-title="Who we are">
+<h2>More of our work</h2>
+<div class="grid">
+<a class="work" href="https://3dforscience.com/projects/case-study-anavex/" target="_blank" rel="noopener"><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/mGSaPvS-/anavex_casestudies_makingoff__98pct_smaller_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/mGSaPvS-/anavex_casestudies_makingoff__98pct_smaller.mp4"></video><div class="wb"><span class="tag">Animation</span><h3>Anavex</h3><p>Mechanisms and pathways your audience can follow.</p><em>View more<b>&rarr;</b></em></div></a>
+<a class="work" href="https://3dforscience.com/projects/case-study-alexion/" target="_blank" rel="noopener"><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/_kVhzidM/case_studies_alexion-1__1__mobile_poster.jpg" src="../v1-assets/media/videos/1343385/_kVhzidM/case_studies_alexion-1__1_.mp4"></video><div class="wb"><span class="tag">E-learning</span><h3>Alexion</h3><p>Training with AI avatars, gamification and clinical cases.</p><em>View more<b>&rarr;</b></em></div></a>
+<a class="work" href="https://3dforscience.com/projects/abbvie-ar/" target="_blank" rel="noopener"><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/hIXhrIPV/abbvie_video_section01_comp_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/hIXhrIPV/abbvie_video_section01_comp.mp4"></video><div class="wb"><span class="tag">Immersive</span><h3>AbbVie</h3><p>VR, AR and 360 experiences inside the science.</p><em>View more<b>&rarr;</b></em></div></a>
+<a class="work" href="https://3dforscience.com/projects/debiopharm-interactive-wall/" target="_blank" rel="noopener"><video muted loop playsinline preload="none" poster="../v1-assets/media/videos/1343385/1BUnyaoA/deiopharm_video012_thumb_00001.0000000.jpg" src="../v1-assets/media/videos/1343385/1BUnyaoA/deiopharm_video012.mp4"></video><div class="wb"><span class="tag">Congress</span><h3>Debiopharm</h3><p>Interactive walls and booth experiences.</p><em>View more<b>&rarr;</b></em></div></a>
+</div>
+</section>
+
+<section data-n="5" data-title="Let&rsquo;s talk">
+<h2>Who we are</h2>
+<p>3DforScience is an award-winning scientific communications agency working worldwide, supporting life sciences companies to transform complex science into compelling visual stories that drive understanding and action for every audience that matters, from investors to KOLs.</p>
+<div class="quote"><p>Working with 3DforScience has been a game-changer for us. Their ability to translate complex science into a visually stunning narrative is unmatched. The final animation not only met but exceeded our expectations, and we look forward to future collaborations.</p>
+<div class="who"><img src="../v1-assets/media/uploads/1343385/images/13114460/image.png" alt=""><div><strong>Anavex</strong><em>President and CEO, Anavex Life Sciences</em></div></div></div>
+<div class="badges"><h3>AWARDS</h3><div class="row"><img src="../v1-assets/media/uploads/1343385/images/13114647/image.png" alt=""><img src="../v1-assets/media/uploads/1343385/images/13114646/image.png" alt=""><img src="../v1-assets/media/uploads/1343385/images/13114441/image.png" alt=""><img src="../v1-assets/media/uploads/1343385/images/13114442/image.png" alt=""><img src="../v1-assets/media/uploads/1343385/images/13114443/image.png" alt=""></div>
+<h3>MEMBERS OF</h3><div class="row members"><img src="../v1-assets/media/uploads/1343385/images/13114444/image.png" alt=""><img src="../v1-assets/media/uploads/1343385/images/13114445/image.png" alt=""><img src="../v1-assets/media/uploads/1343385/images/13114447/image.png" alt=""></div></div>
+</section>
+
+<section class="talk" data-n="6" data-title="">
+<h2>Let's talk</h2>
+<a class="book" href="https://bookings.cloud.microsoft/book/Gc423f442db11437c8ce3595763d92de8@3dforscience.com/?ismsaljsauthenabled=true" target="_blank" rel="noopener">Book a call</a>
+<img class="vis" src="../v1-assets/media/uploads/1343385/images/13114486/image.png" alt="">
+<div class="logos"><img src="../v1-assets/media/uploads/1343385/images/11585369/pasted-from-clipboard.png" alt="3DforScience"><i></i><img class="cl" src="logo.png" alt="Sarepta" style="filter:brightness(0) invert(1)"></div>
+<p class="contact"><strong>3dforscience</strong>.com · info@<strong>3dforscience</strong>.com<br>+34 91 016 43 92 / +1 845-402-0422</p>
+</section>
+
+<a class="pill" href="#" id="dfsmpill">Next · <span>What we saw at Sarepta</span> <b>&darr;</b></a>
+<script>(function(){if(!window.__dfsm)return;var secs=[].slice.call(document.querySelectorAll('#dfsm section')),pill=document.getElementById('dfsmpill'),cur=0;window.__dfsmMax=1;
+function show(i){cur=i;if(i+1>window.__dfsmMax)window.__dfsmMax=i+1;var t=secs[i].getAttribute('data-title');if(!t){pill.classList.add('off');return}pill.classList.remove('off');pill.querySelector('span').textContent=t}
+pill.addEventListener('click',function(e){e.preventDefault();var n=secs[Math.min(cur+1,secs.length-1)];n.scrollIntoView({behavior:'smooth',block:'start'})});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting)show(secs.indexOf(x.target))})},{rootMargin:'-45% 0px -45% 0px'});secs.forEach(function(s){io.observe(s)});
+document.querySelectorAll('#dfsm img.cl').forEach(function(im){var s=im.getAttribute('src')||'';if(!/\.svg(\?|$)/i.test(s))return;fetch(s).then(function(r){return r.text()}).then(function(x){var d=new DOMParser().parseFromString(x,'image/svg+xml').documentElement;if(!d||d.nodeName!=='svg')return;d.removeAttribute('width');d.removeAttribute('height');d.removeAttribute('class');d.setAttribute('fill','#fff');d.querySelectorAll('[fill]').forEach(function(e){var f=e.getAttribute('fill');if(f&&f!=='none')e.setAttribute('fill','#fff')});d.querySelectorAll('[stroke]').forEach(function(e){var f=e.getAttribute('stroke');if(f&&f!=='none')e.setAttribute('stroke','#fff')});d.querySelectorAll('style').forEach(function(e){e.remove()});im.parentNode.replaceChild(d,im)}).catch(function(){})});
+var vo=new IntersectionObserver(function(es){es.forEach(function(x){var v=x.target;if(x.isIntersecting){if(v.preload==='none')v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{rootMargin:'120px 0px'});document.querySelectorAll('#dfsm video').forEach(function(v){vo.observe(v)});
+})();</script>
+</div>
+<!-- /DFS MOBILE LAYER -->
 		<div class="reveal">
 			<div class="slides">
 				<section class="stack" data-id="4671ead1ace425e2e3e9fee5cb5cb520"><section data-id="095bebc228b17d97e62e272628b6567c"><div class="sl-block" data-block-type="video" data-name="video-113f9e" data-block-id="765e06af835ea3ca9095bf853b738e8b" style="min-width: 30px; min-height: 30px; width: 1280px; height: 720px; left: 0px; top: 0px;"><div class="sl-block-style" style="z-index: 10; opacity: 0.45;"><div class="sl-block-content" style="z-index: 10;" data-media-id="11585360" data-video-thumb="../v1-assets/media/videos/1343385/oKbqheKG/0904__77pct_smaller_thumb_00001.jpg"><video playsinline="" data-autoplay="" muted="" loop="loop" poster="../v1-assets/media/videos/1343385/oKbqheKG/0904__77pct_smaller_thumb_00001.jpg" data-paused-by-reveal="" data-lazy-loaded="" data-src="../v1-assets/media/videos/1343385/oKbqheKG/0904__77pct_smaller.mp4"></video></div></div></div>
@@ -211,7 +365,7 @@ if(!slug||navigator.webdriver||int)return;
 const sid=Math.random().toString(36).slice(2,10)+Date.now().toString(36);
 const send=(ev,x)=>{const b=JSON.stringify(Object.assign({slug,sid,ev,t:Date.now()},x||{}));try{if(navigator.sendBeacon&&navigator.sendBeacon(H,new Blob([b],{type:'text/plain'})))return}catch(e){}try{fetch(H,{method:'POST',body:b,keepalive:true,mode:'no-cors'})}catch(e){}};
 const tot=()=>document.querySelectorAll('.slides>section>section').length||6;
-const idx=()=>{try{if(window.Reveal&&Reveal.getIndices){const i=Reveal.getIndices();return (i.v||i.h||0)+1}}catch(e){}return 1};
+const idx=()=>{if(window.__dfsmMax)return window.__dfsmMax;try{if(window.Reveal&&Reveal.getIndices){const i=Reveal.getIndices();return (i.v||i.h||0)+1}}catch(e){}return 1};
 let max=0,act=0,last=Date.now();
 send('open',{ref:document.referrer||'',ua:navigator.userAgent,w:innerWidth,tz:(Intl.DateTimeFormat().resolvedOptions().timeZone||''),lang:navigator.language||'',total:tot()});
 setInterval(()=>{const n=Date.now();if(document.visibilityState==='visible')act+=n-last;last=n;const i=idx();if(i>max){max=i;if(i>1)send('slide',{max,total:tot()})}},1000);
