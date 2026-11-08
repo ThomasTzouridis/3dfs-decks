@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><!--dfs-pharma-shell-->
+<meta name="viewport" content="width=1344, viewport-fit=cover"><meta name="robots" content="noindex">
+<title>3DforScience for GE HealthCare</title>
+<style>html,body{margin:0;height:100%;background:#000}</style>
+<script>
+(function(){var L={"f": "Sabine", "l": "Seufer-Wasserthal", "s": "Natalia Aguilar Bosch"},D='/_pharma/ge-healthcare/deck.html';
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+fetch(D,{cache:'force-cache'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.text()}).then(function(h){
+h=h.split('{First name}').join(esc(L.f)).split('{Last name}').join(esc(L.l)).split('{Sender}').join(esc(L.s));
+document.open();document.write(h);document.close();
+}).catch(function(e){document.body.innerHTML='<p style="color:#fff;font:16px Arial;padding:40px">Loading the presentation failed ('+e.message+'). Please reload.</p>'});
+})();
+</script></head><body></body></html>
